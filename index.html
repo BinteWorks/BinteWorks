@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BinteWorks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Navbar -->
+  <header class="bg-blue-700 text-white p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">BinteWorks</h1>
+      <nav class="space-x-4">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#portfolio" class="hover:underline">Portfolio</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center py-20 bg-gray-100">
+    <h2 class="text-4xl font-bold mb-4">Welcome to BinteWorks</h2>
+    <p class="text-lg mb-6">Ideas. Innovation. Impact.</p>
+    <a href="#contact" class="bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800">Let's Work Together</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-5xl mx-auto py-16 px-4">
+    <h3 class="text-3xl font-bold mb-4">About Us</h3>
+    <p class="text-gray-700">BinteWorks is a dynamic creative and tech-driven company focused on delivering impactful digital solutions, content, and experiences. We believe in the power of ideas and technology to drive change.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-gray-50 py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-8">Our Services</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+          <h4 class="text-xl font-semibold mb-2">Creative Design</h4>
+          <p>Branding, graphic design, and visual identity creation.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+          <h4 class="text-xl font-semibold mb-2">Web & App Development</h4>
+          <p>Modern websites and mobile apps with stunning UX/UI.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+          <h4 class="text-xl font-semibold mb-2">Digital Content</h4>
+          <p>Videos, AI avatars, short-form content, and storytelling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="max-w-5xl mx-auto py-16 px-4">
+    <h3 class="text-3xl font-bold mb-8">Our Work</h3>
+    <div class="grid md:grid-cols-3 gap-4">
+      <button onclick="openModal('Project 1 details...')" class="bg-gray-100 h-48 rounded-lg flex items-center justify-center text-gray-500 hover:bg-gray-200">Project 1</button>
+      <button onclick="openModal('Project 2 details...')" class="bg-gray-100 h-48 rounded-lg flex items-center justify-center text-gray-500 hover:bg-gray-200">Project 2</button>
+      <button onclick="openModal('Project 3 details...')" class="bg-gray-100 h-48 rounded-lg flex items-center justify-center text-gray-500 hover:bg-gray-200">Project 3</button>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white max-w-md w-full p-6 rounded shadow-lg text-center relative">
+      <button onclick="closeModal()" class="absolute top-2 right-4 text-gray-500 text-xl">&times;</button>
+      <h4 class="text-xl font-bold mb-2">Project Details</h4>
+      <p id="modalContent">Details go here...</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-blue-700 text-white py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4">Contact Us</h3>
+      <p class="mb-6">Have a project in mind? We'd love to hear from you.</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded text-black" required />
+        <input type="email" placeholder="Your Email" class="w-full p-3 rounded text-black" required />
+        <textarea placeholder="Your Message" class="w-full p-3 rounded text-black" rows="4" required></textarea>
+        <button type="submit" class="bg-white text-blue-700 font-bold px-6 py-2 rounded hover:bg-gray-200">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-600 py-6 bg-gray-100">
+    &copy; 2025 BinteWorks. All rights reserved.
+  </footer>
+
+  <script>
+    function openModal(content) {
+      document.getElementById('modal').classList.remove('hidden');
+      document.getElementById('modalContent').textContent = content;
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
